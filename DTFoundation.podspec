@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
   spec.name         = 'DTFoundation'
-  spec.version      = '1.7.10'
+  spec.version      = '1.7.10-fix-xcode8-build-error'
   spec.summary      = "Standard toolset classes and categories."
-  spec.homepage     = "https://github.com/Cocoanetics/DTFoundation"
-  spec.author       = { "Oliver Drobnik" => "oliver@cocoanetics.com" }
+  spec.homepage     = "https://github.com/HoneyLuka/DTFoundation"
+  spec.author       = { "Luka" => "luka@honeyluka.com" }
   spec.documentation_url = 'http://docs.cocoanetics.com/DTFoundation'
-  spec.social_media_url = 'https://twitter.com/cocoanetics'
-  spec.source       = { :git => "https://github.com/Cocoanetics/DTFoundation.git", :tag => spec.version.to_s }
+  spec.social_media_url = 'https://twitter.com/rainfyou'
+  spec.source       = { :git => "https://github.com/HoneyLuka/DTFoundation.git", :tag => spec.version.to_s }
   
   spec.ios.deployment_target = '6.0'
   spec.tvos.deployment_target = '9.0'
@@ -92,7 +92,7 @@ Pod::Spec.new do |spec|
     ss.osx.deployment_target = '10.6'
     ss.library = 'sqlite3'
     ss.source_files = 'Core/Source/DTSQLite/*.{h,m}'
-	ss.private_header_files = 'Core/Source/DTSQLite/DTSQLiteFunctions.h'
+  ss.private_header_files = 'Core/Source/DTSQLite/DTSQLiteFunctions.h'
     ss.dependency 'DTFoundation/Core'
   end
 
@@ -119,7 +119,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'DTProgressHUD' do |ss|
     ss.platform = :ios, '6.0'
     ss.dependency 'DTFoundation/UIKit'
-	  ss.dependency 'DTFoundation/Core'
+    ss.dependency 'DTFoundation/Core'
     ss.ios.frameworks = 'QuartzCore'
     ss.ios.source_files = 'Core/Source/iOS/DTProgressHUD/*.{h,m}'
   end
